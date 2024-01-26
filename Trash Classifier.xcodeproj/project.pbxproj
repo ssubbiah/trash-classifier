@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2EBF092B6376A2002924A8 /* Photo Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2EBF082B6376A2002924A8 /* Photo Classifier.swift */; };
 		B848FD492B5CD917000D8A19 /* Trash_ClassifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848FD482B5CD917000D8A19 /* Trash_ClassifierApp.swift */; };
 		B848FD4B2B5CD917000D8A19 /* TrashClassOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848FD4A2B5CD917000D8A19 /* TrashClassOneView.swift */; };
 		B848FD4D2B5CD918000D8A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B848FD4C2B5CD918000D8A19 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2EBF082B6376A2002924A8 /* Photo Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo Classifier.swift"; sourceTree = "<group>"; };
 		B848FD452B5CD917000D8A19 /* Trash Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trash Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B848FD482B5CD917000D8A19 /* Trash_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ClassifierApp.swift; sourceTree = "<group>"; };
 		B848FD4A2B5CD917000D8A19 /* TrashClassOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashClassOneView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				B848FD482B5CD917000D8A19 /* Trash_ClassifierApp.swift */,
 				B848FD4A2B5CD917000D8A19 /* TrashClassOneView.swift */,
+				1E2EBF082B6376A2002924A8 /* Photo Classifier.swift */,
 				B848FD4C2B5CD918000D8A19 /* Assets.xcassets */,
 				B848FD4E2B5CD918000D8A19 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B848FD4B2B5CD917000D8A19 /* TrashClassOneView.swift in Sources */,
+				1E2EBF092B6376A2002924A8 /* Photo Classifier.swift in Sources */,
 				B848FD492B5CD917000D8A19 /* Trash_ClassifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
