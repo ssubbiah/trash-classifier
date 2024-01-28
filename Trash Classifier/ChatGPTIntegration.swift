@@ -81,7 +81,7 @@ class ChatGPT: NSObject {
             if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                 if let responseString = String(data: data, encoding: .utf8) {
                     print(responseString)
-                    //self.decodeJson(json: responseString)
+                    self.decodeJson(json: responseString)
                 }
             } else {
                 print("HTTP Error: \(String(describing: response as? HTTPURLResponse))")
@@ -92,24 +92,55 @@ class ChatGPT: NSObject {
 
     }
    
-    /*
     func decodeJson(json: String) {
         do {
-            let decoder = JSONDecoder()
-            let response = try decoder.decode(Response.self, from: json)
-            
-            // Now you can access the values
-            let object = response.object
-            let classification = response.classification
-            let reason = response.reason
-            
-            print(object)          // Output: someObject
-            print(classification)  // Output: someClassification
-            print(reason)          // Output: someReason
-            
+            let data = Data(json.utf8)
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                // Access nested structures with optional chaining and type casting
+                if let choices = json["choices"] as? [[String: Any]],
+                   let firstChoice = choices.first,
+                   let message = firstChoice["message"] as? [String: Any],
+                   let content = message["content"] as? String {
+                    print(content)
+                    parseContentAndSetResponse(content: content)
+                }
+            }
         } catch {
             print("Error decoding JSON: \(error)")
         }
     }
-     */
+    
+    func parseContentAndSetResponse(content: String) {
+        // Convert the JSON string to Data
+        if let jsonData = removeJSONTags(from: content).data(using: .utf8) {
+            do {
+                // Decode the JSON data
+                let item = try JSONDecoder().decode(ImageResult.self, from: jsonData)
+               
+                self.parent.results = item;
+                
+                // Print each value
+                print("Object: \(item.object)")
+                print("Classification: \(item.classification)")
+                print("Reason: \(item.reason)")
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
+        } else {
+            print("Invalid JSON string")
+        }
+    }
+    
+    func removeJSONTags(from text: String) -> String {
+        // Define the strings to be removed
+        let stringsToRemove = ["```json\n", "\n```"]
+        
+        // Iterate over the strings to remove and replace them with an empty string
+        var result = text
+        for stringToRemove in stringsToRemove {
+            result = result.replacingOccurrences(of: stringToRemove, with: "")
+        }
+        
+        return result
+    }
 }

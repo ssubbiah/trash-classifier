@@ -34,8 +34,8 @@ struct ImagePicker: UIViewControllerRepresentable {
 }
 
 struct ImageResult: Codable {
-    let imageIdentification: String
-    let imageClassification: String
+    let object: String
+    let classification: String
     let reason: String
 }
 
