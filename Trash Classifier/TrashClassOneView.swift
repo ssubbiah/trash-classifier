@@ -74,6 +74,7 @@ struct ScreenTwoView: View {
 struct ScreenThreeView: View {
     @State var isPickerShowing = false
     @State var selectedImage: UIImage?
+    @State var imageResult: ImageResult?
     
     var body: some View {
         VStack{
@@ -90,7 +91,7 @@ struct ScreenThreeView: View {
         }
         .sheet(isPresented: $isPickerShowing, onDismiss: nil, content: {
             // Image picker
-            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing)
+            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, results: $imageResult)
         })
     }
 }

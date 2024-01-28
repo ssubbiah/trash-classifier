@@ -13,6 +13,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var selectedImage: UIImage?
     @Binding var isPickerShowing: Bool
+    @Binding var results: ImageResult?
     
     func makeUIViewController(context: Context) -> some UIViewController {
         
@@ -32,6 +33,12 @@ struct ImagePicker: UIViewControllerRepresentable {
     
 }
 
+struct ImageResult: Codable {
+    let imageIdentification: String
+    let imageClassification: String
+    let reason: String
+}
+
 class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var parent: ImagePicker
@@ -47,6 +54,7 @@ class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationContro
             
             DispatchQueue.main.async {
                 self.parent.selectedImage = image
+                return ChatGPT(self.parent).classifyTrash()
             }
         }
         parent.isPickerShowing = false

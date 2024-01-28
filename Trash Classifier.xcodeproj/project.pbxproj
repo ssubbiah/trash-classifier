@@ -15,6 +15,7 @@
 		B848FD5A2B5CD918000D8A19 /* Trash_ClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848FD592B5CD918000D8A19 /* Trash_ClassifierTests.swift */; };
 		B848FD642B5CD918000D8A19 /* Trash_ClassifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848FD632B5CD918000D8A19 /* Trash_ClassifierUITests.swift */; };
 		B848FD662B5CD918000D8A19 /* Trash_ClassifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848FD652B5CD918000D8A19 /* Trash_ClassifierUITestsLaunchTests.swift */; };
+		B863D2422B63C76900493E6C /* ChatGPTIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B863D2412B63C76900493E6C /* ChatGPTIntegration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B848FD5F2B5CD918000D8A19 /* Trash ClassifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Trash ClassifierUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B848FD632B5CD918000D8A19 /* Trash_ClassifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ClassifierUITests.swift; sourceTree = "<group>"; };
 		B848FD652B5CD918000D8A19 /* Trash_ClassifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ClassifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B863D2412B63C76900493E6C /* ChatGPTIntegration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTIntegration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				B848FD482B5CD917000D8A19 /* Trash_ClassifierApp.swift */,
 				B848FD4A2B5CD917000D8A19 /* TrashClassOneView.swift */,
 				1E2EBF082B6376A2002924A8 /* Photo Classifier.swift */,
+				B863D2412B63C76900493E6C /* ChatGPTIntegration.swift */,
 				B848FD4C2B5CD918000D8A19 /* Assets.xcassets */,
 				B848FD4E2B5CD918000D8A19 /* Preview Content */,
 			);
@@ -262,6 +265,7 @@
 			files = (
 				B848FD4B2B5CD917000D8A19 /* TrashClassOneView.swift in Sources */,
 				1E2EBF092B6376A2002924A8 /* Photo Classifier.swift in Sources */,
+				B863D2422B63C76900493E6C /* ChatGPTIntegration.swift in Sources */,
 				B848FD492B5CD917000D8A19 /* Trash_ClassifierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
