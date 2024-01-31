@@ -65,7 +65,7 @@ struct ScreenTwoView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Links to Websites for Awarness of Garbage")
+                Link("Trash Pollution GOV", destination: URL(string: "https://www.epa.gov/trash-free-waters/what-you-can-do-about-trash-pollution")!)
             }
         }
     }
@@ -93,6 +93,7 @@ struct ScreenThreeView: View {
             // Image picker
             ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, results: $imageResult)
         })
+        
     }
 }
 #Preview {
