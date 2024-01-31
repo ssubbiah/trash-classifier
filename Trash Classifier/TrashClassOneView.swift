@@ -83,6 +83,30 @@ struct ScreenThreeView: View {
                     .resizable()
                     .frame(width:200,height:200)
             }
+            if let result = imageResult {
+                Form {
+                    Section(header: Text("Analysis Result")) {
+                        HStack {
+                            Text("Object:")
+                            Spacer()
+                            Text(result.object)
+                                .foregroundColor(.gray)
+                        }
+                        HStack {
+                            Text("Classification:")
+                            Spacer()
+                            Text(result.classification)
+                                .foregroundColor(.gray)
+                        }
+                        HStack {
+                            Text("Reason:")
+                            Spacer()
+                            Text(result.reason)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                }
+            }
             Button {
                 isPickerShowing = true
             } label: {
