@@ -12,19 +12,27 @@ struct TrashClassOneView: View {
         NavigationView{
             VStack{
                 ScreenOneView()
-                    .navigationTitle("Trash Classifier")
+                    .navigationTitle("Eco-Sorter")
                 
                 NavigationLink(destination:TrashClassTwoView(),label: {
                     Text("Information")
+                        .bold()
                         .font(.title)
-                        .fontWeight(.bold)
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(12)
                 })
                 NavigationLink(
                     destination:ScreenThreeView(),
                     label: {
                     Text("Scan Waste")
+                            .bold()
                             .font(.title)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .frame(width:280,height:50)
+                            .foregroundColor(.white)
+                            .background(Color.green)
+                            .cornerRadius(12)
                 })
             }
         }
@@ -34,7 +42,16 @@ struct TrashClassTwoView: View {
     var body: some View {
         VStack{
             ScreenTwoView()
-                .navigationTitle("Information")
+            NavigationLink(
+                destination:ScreenThreeView(),
+                label: {
+                Text("Scan Waste")
+                        .bold()
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.green)
+                        .cornerRadius(12)
+            })
         }
     }
 }
@@ -42,7 +59,6 @@ struct TrashClassThreeView: View {
     var body: some View {
         VStack{
             ScreenThreeView()
-                .navigationTitle("Scan Waste")
         }
     }
 }
@@ -65,7 +81,39 @@ struct ScreenTwoView: View {
     var body: some View {
         ZStack {
             VStack {
-                Link("Trash Pollution GOV", destination: URL(string: "https://www.epa.gov/trash-free-waters/what-you-can-do-about-trash-pollution")!)
+                Link(destination: URL(string:"https://www.epa.gov/trash-free-waters/what-you-can-do-about-trash-pollution")!, label:{
+                    Text("Trash Pollution GOV")
+                        .bold()
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                Link(destination: URL(string:"https://www.unep.org/plastic-pollution#:~:text=Plastic%20pollution%20can%20alter%20habitats,t%20exist%20in%20a%20vacuum")!, label:{
+                    Text("Plastic Pollution")
+                        .bold()
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                Link(destination: URL(string:"https://www.allcountyrecycling.com/blog/2020/three-negative-effects-our-trash-has-on-the-environment.html#:~:text=It%20Contaminates%20Our%20Water,quality%20of%20the%20surface%20water")!, label:{
+                    Text("Negative Effects of Trash")
+                        .bold()
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                Link(destination: URL(string:"https://dnr.wisconsin.gov/topic/OpenBurning/Impacts.html#:~:text=Burning%20prohibited%20materials%2C%20such%20as,surface%20water%20and%20on%20plants")!, label:{
+                    Text("Environmental and Health Impacts")
+                        .bold()
+                        .frame(width:280,height:50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                Text(" ")
             }
         }
     }
@@ -111,7 +159,22 @@ struct ScreenThreeView: View {
                 isPickerShowing = true
             } label: {
                 Text("Select a Photo")
+                    .bold()
+                    .font(.title)
+                    .frame(width:280,height:50)
+                    .foregroundColor(.blue)
+                    .background(Color.green)
+                    .cornerRadius(12)
             }
+            Text(" ")
+            NavigationLink(destination:TrashClassTwoView(),label: {
+                Text("Information")
+                    .bold()
+                    .frame(width:280,height:50)
+                    .foregroundColor(.white)
+                    .background(Color.black)
+                    .cornerRadius(12)
+            })
         }
         .sheet(isPresented: $isPickerShowing, onDismiss: nil, content: {
             // Image picker
