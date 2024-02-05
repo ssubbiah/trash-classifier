@@ -121,6 +121,7 @@ struct ScreenTwoView: View {
 
 struct ScreenThreeView: View {
     @State var isPickerShowing = false
+    @State var showAlbum = false
     @State var selectedImage: UIImage?
     @State var imageResult: ImageResult?
     
@@ -157,8 +158,21 @@ struct ScreenThreeView: View {
             }
             Button {
                 isPickerShowing = true
+                showAlbum = true
             } label: {
                 Text("Select a Photo")
+                    .bold()
+                    .font(.title)
+                    .frame(width:280,height:50)
+                    .foregroundColor(.blue)
+                    .background(Color.green)
+                    .cornerRadius(12)
+            }
+            Button {
+                isPickerShowing = true
+                showAlbum = false
+            } label: {
+                Text("Take a Photo")
                     .bold()
                     .font(.title)
                     .frame(width:280,height:50)
@@ -178,7 +192,7 @@ struct ScreenThreeView: View {
         }
         .sheet(isPresented: $isPickerShowing, onDismiss: nil, content: {
             // Image picker
-            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, results: $imageResult)
+            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, showAlbum: $showAlbum, results: $imageResult)
         })
         
     }
