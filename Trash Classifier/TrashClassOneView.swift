@@ -168,6 +168,7 @@ struct ScreenThreeView: View {
                     .background(Color.green)
                     .cornerRadius(12)
             }
+            Text(" ")
             Button {
                 isPickerShowing = true
                 showAlbum = false

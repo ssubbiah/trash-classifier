@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		1E2EBF082B6376A2002924A8 /* Photo Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo Classifier.swift"; sourceTree = "<group>"; };
-		B848FD452B5CD917000D8A19 /* Trash Classifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trash Classifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B848FD452B5CD917000D8A19 /* Eco-Sorter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eco-Sorter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B848FD482B5CD917000D8A19 /* Trash_ClassifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trash_ClassifierApp.swift; sourceTree = "<group>"; };
 		B848FD4A2B5CD917000D8A19 /* TrashClassOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashClassOneView.swift; sourceTree = "<group>"; };
 		B848FD4C2B5CD918000D8A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 		B848FD462B5CD917000D8A19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B848FD452B5CD917000D8A19 /* Trash Classifier.app */,
+				B848FD452B5CD917000D8A19 /* Eco-Sorter.app */,
 				B848FD552B5CD918000D8A19 /* Trash ClassifierTests.xctest */,
 				B848FD5F2B5CD918000D8A19 /* Trash ClassifierUITests.xctest */,
 			);
@@ -136,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B848FD442B5CD917000D8A19 /* Trash Classifier */ = {
+		B848FD442B5CD917000D8A19 /* Eco-Sorter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B848FD692B5CD918000D8A19 /* Build configuration list for PBXNativeTarget "Trash Classifier" */;
+			buildConfigurationList = B848FD692B5CD918000D8A19 /* Build configuration list for PBXNativeTarget "Eco-Sorter" */;
 			buildPhases = (
 				B848FD412B5CD917000D8A19 /* Sources */,
 				B848FD422B5CD917000D8A19 /* Frameworks */,
@@ -148,9 +148,9 @@
 			);
 			dependencies = (
 			);
-			name = "Trash Classifier";
+			name = "Eco-Sorter";
 			productName = "Trash Classifier";
-			productReference = B848FD452B5CD917000D8A19 /* Trash Classifier.app */;
+			productReference = B848FD452B5CD917000D8A19 /* Eco-Sorter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B848FD542B5CD918000D8A19 /* Trash ClassifierTests */ = {
@@ -225,7 +225,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B848FD442B5CD917000D8A19 /* Trash Classifier */,
+				B848FD442B5CD917000D8A19 /* Eco-Sorter */,
 				B848FD542B5CD918000D8A19 /* Trash ClassifierTests */,
 				B848FD5E2B5CD918000D8A19 /* Trash ClassifierUITests */,
 			);
@@ -292,12 +292,12 @@
 /* Begin PBXTargetDependency section */
 		B848FD572B5CD918000D8A19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B848FD442B5CD917000D8A19 /* Trash Classifier */;
+			target = B848FD442B5CD917000D8A19 /* Eco-Sorter */;
 			targetProxy = B848FD562B5CD918000D8A19 /* PBXContainerItemProxy */;
 		};
 		B848FD612B5CD918000D8A19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B848FD442B5CD917000D8A19 /* Trash Classifier */;
+			target = B848FD442B5CD917000D8A19 /* Eco-Sorter */;
 			targetProxy = B848FD602B5CD918000D8A19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -430,10 +430,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trash Classifier/Preview Content\"";
-				DEVELOPMENT_TEAM = J2V26C53A2;
+				DEVELOPMENT_TEAM = X78ZWM5B68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Trash Classifier camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -444,7 +444,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yuvarch.Trash-Classifier";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuvansubbiah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,10 +460,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Trash Classifier/Preview Content\"";
-				DEVELOPMENT_TEAM = J2V26C53A2;
+				DEVELOPMENT_TEAM = X78ZWM5B68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Trash Classifier camera use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -474,7 +474,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yuvarch.Trash-Classifier";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuvansubbiah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B848FD692B5CD918000D8A19 /* Build configuration list for PBXNativeTarget "Trash Classifier" */ = {
+		B848FD692B5CD918000D8A19 /* Build configuration list for PBXNativeTarget "Eco-Sorter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B848FD6A2B5CD918000D8A19 /* Debug */,
